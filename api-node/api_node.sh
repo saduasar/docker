@@ -1,6 +1,6 @@
 #!/bin/bash
 DATABASE_URL=postgres://postgres:mysecretpassword@$container_ip:5432/postgres
-container_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgresDB)
+container_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgresDB
 
 
 #!/bin/bash
