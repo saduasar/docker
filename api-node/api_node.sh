@@ -1,12 +1,22 @@
 #!/bin/bash
 DATABASE_URL=postgres://postgres:mysecretpassword@172.17.0.2:5432/postgres
 
+#!/bin/bash
+
 echo "Installing dependencies"
-sudo apt update && apt upgrade -y
-sudo apt install nodejs \
-    sudo apt install npm \
-    npm install -g nodemon \
-    npm install pg
+
+# Update and upgrade system packages
+sudo apt update && sudo apt upgrade -y
+
+# Install Node.js and npm
+sudo apt install nodejs npm -y
+
+# Install global npm packages
+sudo npm install -g nodemon
+
+# Install npm package locally
+npm install pg
+
 
 
 echo "Starting api-node"
