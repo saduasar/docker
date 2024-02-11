@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Creating mount volume- PGDATA
-docker volume create pgs-volume 
+sudo docker volume create pgs-volume 
 
 #Creating the docker container from  postgres:15.1-alpine official image
-docker run -d \
+sudo docker run -d \
 	--name postgresDB \
 	-e POSTGRES_PASSWORD=mysecretpassword \
 	-e PGDATA=/var/lib/postgresql/data/pgdata \
