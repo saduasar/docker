@@ -1,1 +1,6 @@
-
+Docker installation
+To run the script to give execute permission to the current shell user. Run: chmod u+x postgressDB.sh
+You can simply run the script by: ./postgressDB.sh
+After docker is installed successfully from the docker-install.sh, add your user to the docker group. 
+Run command: sudo usermod -aG docker <user>
+After this reboot your machine
