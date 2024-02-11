@@ -1,11 +1,8 @@
 #!/bin/bash
 
-# Fetching IP address of container with name "postgresDB"
-container_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgresDB
 
 # Creating DATABASE_URL with the retrieved container IP
-DATABASE_URL="postgres://postgres:mysecretpassword@${container_ip}:5432/postgres"
-
+DATABASE_URL="postgres://postgres:mysecretpassword@172.17.0.2:5432/postgres"
 
 #!/bin/bash
 
