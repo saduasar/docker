@@ -19,3 +19,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 #Verify the success of docker installation
 sudo docker run hello-world
+
+#Give the cuurent login user permissions to use the docker daemon socket (to be run docker command without being root)
+sudo chown $USER /var/run/docker.sock
